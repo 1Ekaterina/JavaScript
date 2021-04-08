@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        //Задание №1
+// var a = 1, b = 1, c, d;
+// c = ++a; alert(c);           // 2 ПРЕ-ИНКРЕМЕНТ, т.е. сначала увеличивает знечение, а потом возвращает
+// d = b++; alert(d);           // 1 ПОСТ-ИНКРЕМЕНТ, сначала возвращает значение, а потом увеличивает его
+// c = (2+ ++a); alert(c);      // 5 здесь а была сначала увеличена на 1, т.е. а=3, а затем выполнилось сложение
+// d = (2+ b++); alert(d);      // 4 b возвращает число 2(после 4ой строки б увеличилось), а потом сложение
+// alert(a);                    // 3 
+// alert(b);                    // 3
+//Задание №2
+var a = 2;
+var x = 1 + (a *= 2); // x=5
+//Задание №3 
+// (Объявить две целочисленные переменные k и l и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу:
+// если k и l положительные, вывести их разность;
+// если k и l отрицательные, вывести их произведение;
+// если k и l разных знаков, вывести их сумму; ноль можно считать положительным числом.)
+var min=-20;
+var max=20;
+var k=parseInt(Math.floor(Math.random() *(max-min))+min); //от -20 до 20
+var l=parseInt(Math.floor(Math.random() *(max-min))+min);
+if((k>=0)&&(l>=0)){
+    alert (k + " - " + l + " = " + (k-l));
+} else if((k<0)&&(l<0)){
+    alert (k + " * " + l + " = " + (k*l));
+} else{
+    alert (k +" + " + l + " = " + (k+l));
+}
+//Задание №4
+// Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до 15.
+var a=parseInt(Math.random() *15);
+alert("Число а="+a);
+var b='';
+switch(a){
+    case 0:
+    b+= '0, ';
+    case 1:
+    b+= '1, ';
+    case 2:
+    b+= '2, ';
+    case 3:
+    b+= '3, ';
+    case 4:
+    b+= '4, ';
+    case 5:
+    b+= '5, ';
+    case 6:
+    b+= '6, ';
+    case 7:
+    b+= '7, ';
+    case 8:
+    b+= '8, ';
+    case 9:
+    b+= '9, ';
+    case 10:
+    b+= '10, ';
+    case 11:
+    b+= '11, ';
+    case 12:
+    b+= '12, ';
+    case 13:
+    b+= '13, ';
+    case 14:
+    b+= '14, ';
+    case 15:
+    b+= '15';
+}
+alert (b);
+//Задание №5
+// Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.
+var a=14;
+var b=7;
+function plus (a,b){
+    return (a+b);
+}
+function minus (a,b){
+    return (a-b);
+}
+function times (a,b){
+    return (a*b);
+}
+function dividedBy (a,b){
+    return (a/b);
+}
+alert(a+ "+" + b + "="+(plus(a,b))+ "\n" + a+ "-" + b + "="+(minus(a,b))+ "\n" +a+ "*" + b + "="+(times(a,b))+ "\n" + a+ "/" + b + "="+(dividedBy(a,b)));
+//Задание №6
+// Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, 
+// operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических 
+// операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch).
+var arg1 = parseInt(prompt("Введите аргумент №1"));
+var arg2 = parseInt(prompt("Введите аргумент №2"));
+var operation = prompt("Введите операцию +,-,*,/");
+function mathOperation(arg1, arg2, operation){
+    switch (operation){
+        case "+":
+            return plus(arg1,arg2);
+            break;
+        case "-":
+            return minus(arg1,arg2);
+            break;
+        case "*":
+            return times(arg1,arg2);
+            break;
+        case  "/":
+            return dividedBy(arg1,arg2);
+            break;
+        default:
+            return ("Неверно ввели операцию");
+    }
+}
+alert(mathOperation(arg1,arg2,operation));
+//Задание №7
+// *Сравнить null и 0. Попробуйте объяснить результат.
+
+//Задание №8
+// *С помощью рекурсии организовать функцию возведения числа в степень. Формат: function power(val, pow), где val – заданное число, pow – степень.
+function power(val, pow){
+    if (pow != 0)
+	{
+		return val * power (val, pow - 1);
+	}
+		return 1;
+}
+alert("2^3= "+power(2,3));
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
