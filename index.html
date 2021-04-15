@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Задание №1 
+        //С помощью цикла while вывести все простые числа в промежутке от 0 до 100
+        document.write ("Задание №1<br><br>");
+        var x=0;
+        function prow(number){
+            var i=2;
+            while (i<=number/2){
+               if (number%i==0){
+                 return false;  
+               }
+               i++; 
+            }
+            return true;
+        }
+        
+        
+        while (x<=100){
+                if (prow(x)==true){
+                    document.write (x);
+                    document.write ("   ");
+                }
+                x++;
+        }
+        //Задание №2-3
+        // Реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.
+        // 3. Товары в корзине хранятся в массиве. Задачи:
+        // a) Организовать такой массив для хранения товаров в корзине;
+        // b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+        document.write ("<br><br>Задание №2-3<br><br>");
+        var cart = [
+            {
+                name: "Футболка",
+                price: 1200,
+                count: 1
+            },
+            {
+                name: "Джинсы",
+                price: 2200,
+                count: 2
+            },
+            {
+                name: "Куртка",
+                price: 4200,
+                count: 1
+            }
+        ]
+        function countCartPrice (mas){
+            var sum=0;
+            for (var item of mas){
+                sum+=(item.price*item.count);
+            }
+            return sum;
+        }
+        document.write(countCartPrice(cart));
+        //Задание №4
+        //Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. Выглядеть это должно так:
+        document.write ("<br><br>Задание №4<br><br>");
+        for(var i=0;i<=9;document.write(i++));
+        //Задание №5
+        // Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+        // x
+        // xx
+        // xxx
+        // xxxx
+        // xxxxx
+         document.write ("<br><br>Задание №5<br><br>");
+         var str='';
+         for(var i=0;i<20;i++){
+             str+="X";
+             document.write(str + "<br>");
+             console.log(str);
+         }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
