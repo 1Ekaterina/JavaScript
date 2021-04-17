@@ -10,18 +10,37 @@
         //в котором в соответствующих свойствах описаны единицы, десятки и сотни.Например, для числа 245 мы должны получить 
         //следующий объект: { ‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2 }.Если число превышает 999, необходимо выдать соответствующее 
         //сообщение с помощью console.log и вернуть пустой объект.
-        function object(num){
-            var count=num.length;
-            var mass={};
+        
+        var number = prompt("Введите число от 0 до 999");       
+        var count=number.length;
+        var mass={};
 
+        object(number);
+
+        function object(num){
+            if (num<0 || num>999){
+                console.log("Число вне диапазона 0-999")
+            } else{
+                switch(count){
+                    case 3:
+                        mass.units = number[2];
+                        mass.tens = number[1];
+                        mass.hund = number[0];
+                        break;
+                    case 2:
+                        mass.units = number[1];
+                        mass.tens = number[0];
+                    case 1:
+                        mass.units = number;
+                }
+                console.log(mass);
+            }
+            return mass;
         }
         
-        if (count==1){
-            mass['сотни']=
-        }
-        var number = prompt("Введите число от 0 до 999");       
-        alert(object(number));
-        //2.Для игры, реализованной на уроке, добавить возможность вывода хода номер n(номер задается пользователем)
+        
+        
+        //2.Для игры, реализованной на уроке, добавить возможность вывода хода номер n(номер задается пользователем) !ДРУГОЙ ФАЙЛ!
             
         //3.* На базе игры, созданной на уроке, реализовать игру «Кто хочет стать миллионером ?»
     </script>
