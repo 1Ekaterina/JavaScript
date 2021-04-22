@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        var table = document.createElement('table');
+        var str, sek;
+        var figur = ["", "&#9820;", "&#9822;", "&#9821;", "&#9819;", "&#9818;", "&#9821;", "&#9822;", "&#9820;", ""];
+        var bykv = ["", "A", "B", "C", "D", "E", "F", "G", "H", ""];
+        var flcolor = 0;
+
+        document.body.appendChild(table);
+        table.style="width:600px;font-size:45px;";
+        for (var i=0;i<10;i++){
+        str=document.createElement('tr');
+        str.className="stroka";
+        table.appendChild(str);
+            for (var j=0;j<10;j++){
+                    flcolor++;                    
+                    sek=document.createElement('th');
+                    sek.style.width="50px";
+                    sek.style.height="50px";
+                    if (i==1) {
+                        sek.innerHTML="<span>"+figur[j]+"</span>";
+                    }
+                    if ((i==2)||(i==7)) {
+                        sek.innerHTML="<span>&#9823;</span>";
+                    }
+                    if (i==8) {
+                        sek.innerHTML="<span>"+figur[j]+"</span>";
+                    }
+                    if ((i==0)||(i==9)) {
+                        sek.innerHTML="<span>"+bykv[j]+"</span>";
+                        sek.style.fontSize="25px";
+                        if ((i==0)){
+                            sek.style.transform="rotate(180deg)"; 
+                        }                                           
+                    }
+                    
+                    if(j==9){
+                        sek.style.transform="rotate(180deg)";
+                    }                                           
+                    if (((j==0)||(j==9))&&((i>0)&&(i<9))) {
+                        sek.innerHTML="<span>"+i+"</span>";
+                        sek.style.fontSize="25px";
+                    }                                   
+                    if ((j>0)&&(j<9)&&(i>0)&&(i<9)){
+                        if(flcolor%2==0)  {
+                            sek.style.background="#5b3225";
+                        }
+                        else {
+                            sek.style.background="#ede3b1";
+                        }                            
+                        if (i<4){
+                            sek.style.color="#000000";
+                        } else {
+                            sek.style.color="#FFFFFF";
+                        }
+                            
+                    } else {
+                            sek.style.background="#f5f0d6";
+                        }                    
+                    str.appendChild(sek);                    
+                }
+         flcolor++;        
+}
+        
+    </script>
