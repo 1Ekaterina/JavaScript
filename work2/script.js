@@ -1,4 +1,19 @@
-var product = {
+var card1 = {
+    price: 0,
+    count: 0,
+    summa: 0
+}
+var card2 = {
+    price: 0,
+    count: 0,
+    summa: 0
+}
+var card3 = {
+    price: 0,
+    count: 0,
+    summa: 0
+}
+var card4 = {
     price: 0,
     count: 0,
     summa: 0
@@ -13,40 +28,47 @@ function add(id) {
     if (li != null) {
         switch (id) {
             case 'card-1':
-                card1.count = parseInt(li.innerHTML.split(' ')[1]) + 1;
+                card1.count = card1.count + 1;
                 break;
             case 'card-2':
-                card2.count = parseInt(li.innerHTML.split(' ')[1]) + 1;
+                card2.count = card2.count + 1;
                 break;
             case 'card-3':
-                card3.count = parseInt(li.innerHTML.split(' ')[1]) + 1;
+                card3.count = card3.count + 1;
                 break;
             case 'card-4':
-                Yellow.count = parseInt(li.innerHTML.split(' ')[1]) + 1;
+                card4.count = card4.count + 1;
                 break;
         }
     } else {
         switch (id) {
-            case 'red':
+            case 'card-1':
                 newLi = document.createElement('li');
-                newLi.innerHTML = 'Red: 1';
-                newLi.id = 'li_red';
+                newLi.innerHTML = 'MANGO PEOPLE T-SHIRT: 1';
+                newLi.id = 'li_card-1';
                 ol.appendChild(newLi);
-                Red.count = 1;
+                card1.count = 1;
                 break;
-            case 'blue':
+            case 'card-2':
                 newLi = document.createElement('li');
-                newLi.innerHTML = 'Blue: 1';
-                newLi.id = 'li_blue';
+                newLi.innerHTML = 'MANGO PEOPLE T: 1';
+                newLi.id = 'li_card-2';
                 ol.appendChild(newLi);
-                Blue.count = 1;
+                card2.count = 1;
                 break;
-            case 'yellow':
+            case 'card-3':
                 newLi = document.createElement('li');
-                newLi.innerHTML = 'Yellow: 1';
-                newLi.id = 'li_yellow';
+                newLi.innerHTML = 'MANGO PEOPLE: 1';
+                newLi.id = 'li_card-3';
                 ol.appendChild(newLi);
-                Yellow.count = 1;
+                card3.count = 1;
+                break;
+            case 'card-4':
+                newLi = document.createElement('li');
+                newLi.innerHTML = 'MANGO: 1';
+                newLi.id = 'li_card-4';
+                ol.appendChild(newLi);
+                card14.count = 1;
                 break;
         }
     }
@@ -54,42 +76,52 @@ function add(id) {
 
 
     switch (id) {
-        case 'red':
-            Red.price = d.getElementsByTagName('p')[0].innerHTML;
-            Red.summa = Red.count * Red.price;
+        case 'card-1':
+            card1.price = main1.getElementsByTagName('p')[1].innerHTML;
+            card1.summa = card1.count * card1.price;
             break;
-        case 'blue':
-            Blue.price = d.getElementsByTagName('p')[0].innerHTML;
-            Blue.summa = Blue.count * Blue.price;
+        case 'card-2':
+            card2.price = main2.getElementsByTagName('p')[1].innerHTML;
+            card2.summa = card2.count * card2.price;
             break;
-        case 'yellow':
-            Yellow.price = d.getElementsByTagName('p')[0].innerHTML;
-            Yellow.summa = Yellow.count * Yellow.price;
+        case 'card-3':
+            card3.price = main3.getElementsByTagName('p')[1].innerHTML;
+            card3.summa = card3.count * card3.price;
+            break;
+        case 'card-4':
+            card4.price = main4.getElementsByTagName('p')[1].innerHTML;
+            card4.summa = card4.count * card4.price;
             break;
     }
 
     if (li != null) {
         switch (id) {
-            case 'red':
-                li.innerHTML = "Red: " + Red.count + " шт. по цене " + Red.price + " на сумму " + Red.summa;
+            case 'card-1':
+                li.innerHTML = "MANGO PEOPLE T-SHIRT: " + card1.count + " шт. по цене " + card1.price + " на сумму " + card1.summa;
                 break;
-            case 'blue':
-                li.innerHTML = "blue: " + Blue.count + " шт. по цене " + Blue.price + " на сумму " + Blue.summa;
+            case 'card-2':
+                li.innerHTML = "MANGO PEOPLE T: " + card2.count + " шт. по цене " + card2.price + " на сумму " + card2.summa;
                 break;
-            case 'yellow':
-                li.innerHTML = "yellow: " + Yellow.count + " шт. по цене " + Yellow.price + " на сумму " + Yellow.summa;
+            case 'card-3':
+                li.innerHTML = "MANGO PEOPLE: " + card3.count + " шт. по цене " + card3.price + " на сумму " + card3.summa;
+                break;
+            case 'card-4':
+                li.innerHTML = "MANGO: " + card4.count + " шт. по цене " + card4.price + " на сумму " + card4.summa;
                 break;
         }
     } else {
         switch (id) {
-            case 'red':
-                newLi.innerHTML = "Red: " + Red.count + " шт. по цене " + Red.price + " на сумму " + Red.summa;
+            case 'card-1':
+                newLi.innerHTML = "MANGO PEOPLE T-SHIRT: " + card1.count + " шт. по цене " + card1.price + " на сумму " + card1.summa;
                 break;
-            case 'blue':
-                newLi.innerHTML = "blue: " + Blue.count + " шт. по цене " + Blue.price + " на сумму " + Blue.summa;
+            case 'card-2':
+                newLi.innerHTML = "MANGO PEOPLE T: " + card2.count + " шт. по цене " + card2.price + " на сумму " + card2.summa;
                 break;
-            case 'yellow':
-                newLi.innerHTML = "yellow: " + Yellow.count + " шт. по цене " + Yellow.price + " на сумму " + Yellow.summa;
+            case 'card-3':
+                newLi.innerHTML = "MANGO PEOPLE: " + card3.count + " шт. по цене " + card3.price + " на сумму " + card3.summa;
+                break;
+            case 'card-4':
+                newLi.innerHTML = "MANGO: " + card4.count + " шт. по цене " + card4.price + " на сумму " + card4.summa;
                 break;
         }
 
@@ -105,7 +137,7 @@ var itog = document.createElement('li');
 itog.id = 'itog';
 
 ol.appendChild(itog);
-var ss = Red.summa + Blue.summa + Yellow.summa;
+var ss = card1.summa + card2.summa + card3.summa + card4.summa;
 itog.innerHTML = "Всего:" + ss;
 
 
