@@ -1,0 +1,89 @@
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+.cardMain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 55px;
+}
+.card {
+    position: relative;
+    max-width: 263px;
+    margin-bottom: 40px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.cardLink {
+    max-width: 263px;
+    display: block;
+    text-decoration: none;
+}
+.card:hover .card-img {
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
+}
+.card-text-box {
+    padding: 0px 15px 20px;
+}
+.cardText {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 13px;
+    color: #222222;
+}
+
+.cardText:hover {
+    color: #ef5b70;
+}
+
+.cardSum {
+    margin-top: 17px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    color: #f16d7f;
+}
+.box-add {
+    position: absolute;
+    top: 98px;
+    display: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.card:hover .box-add {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.add {
+    border: 1px solid #ffffff;
+    padding: 12px 17px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.add:hover {
+    -webkit-box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px #fff;
+}
+.add-img {
+    margin-right: 7px;
+}
